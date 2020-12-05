@@ -3,9 +3,6 @@
 var fs = require("fs");
 var passwords = fs.readFileSync('./day2input.txt').toString().split('\r\n')
 
-// console.log(passwords);
-// console.log(get_password('123-345 a: lajuewhla'));
-
 var count = 0;
 var j;
 for(j = 0; j < passwords.length; j++){
