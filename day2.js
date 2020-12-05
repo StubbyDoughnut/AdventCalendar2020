@@ -13,7 +13,32 @@ for(j = 0; j < passwords.length; j++){
   }
 }
 
-console.log(count);
+console.log("valid:", count);
+
+var part_2_count = 0;
+var part_2_alt = 0;
+var k;
+for(k = 0; k < passwords.length - 1; k++){
+  var current = passwords[k];
+
+  var first_hit = match_at_position(get_password(current), get_letter(current), get_lower_bound(current));
+  var second_hit = match_at_position(get_password(current), get_letter(current), get_upper_bound(current));
+
+  if(first_hit ^ second_hit){
+    part_2_count++;
+  } else {
+    part_2_alt++;
+  }
+}
+
+console.log("valid:", part_2_count, "invalid:", part_2_alt);
+
+function match_at_position(password, letter, position){
+  if (password.charAt(position - 1) == letter){
+    return 1;
+  }
+  return 0;
+}
 
 function get_password(str){
   var password = '';
