@@ -1,0 +1,11 @@
+{
+  "name": "advent-coding",
+  "version": "1.0.0",
+  "description": "My answers to advent coding challenges",
+  "main": "test.js",
+  "scripts": {
+    "test": "console.log('hello');"
+  },
+  "author": "Niko Suave",
+  "license": "ISC"
+}
